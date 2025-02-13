@@ -78,3 +78,7 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+
+  deploy-reuse:
+    needs: [lint,build]
+    uses: ./.github/workflows/continuous-delivery.yml
