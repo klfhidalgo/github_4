@@ -42,6 +42,7 @@ jobs:
           name: test-report
           path: test.json
   build:
+    if: failure()
     needs: test
     runs-on: ubuntu-latest
     steps:
